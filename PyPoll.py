@@ -55,44 +55,59 @@ with open(file_to_load) as election_data:
         # but inside 'for' loop so that it tallies each time we process a new row)
         candidate_votes[candidate_name] += 1
 
+#Save results to our text file
+with open(file_to_save, "w") as txt_file:
 
-#4 Determine the percentage of votes each candidate won, by looping through counts
-for candidate_name in candidate_votes:
-    #4a Retrieve vote count of a candidate and assign it to a new value variable 
-    votes = candidate_votes[candidate_name]
-    #4b calculate the percentage of votes
-    vote_percentage = float(votes)/float(total_votes) * 100
-    #4c. Print the candidate name and percentage of votes
-    print(f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")
+    #Text to Display
+    election_results = (f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+    print(election_results, end="")
+    
+    #Save the final vote count to the text file
+    txt_file.write(election_results)
+    
+    #4 Determine the percentage of votes each candidate won, by looping through counts
+    for candidate_name in candidate_votes:
+        #4a Retrieve vote count of a candidate and assign it to a new value variable 
+        votes = candidate_votes[candidate_name]
+        #4b calculate the percentage of votes
+        vote_percentage = float(votes)/float(total_votes) * 100
+        #4c. Print the candidate name and percentage of votes
+        candidate_results = (f"{candidate_name}: {vote_percentage: .1f}% ({votes:,})\n")
+        print(candidate_results)
+        txt_file.write(candidate_results)
 
-#5 Determine winning vote count and candidate
-    #5a Determine if the voters are greater than the winning count.
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
-        #5b if true, then set winning_count = votes and winning_percentage = vote_percentage
-        winning_count = votes
-        winning_percentage = vote_percentage
-        #5c set winning candidate equal to candidate's name
-        winning_candidate = candidate_name
+    #5 Determine winning vote count and candidate
+        #5a Determine if the voters are greater than the winning count.
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            #5b if true, then set winning_count = votes and winning_percentage = vote_percentage
+            winning_count = votes
+            winning_percentage = vote_percentage
+            #5c set winning candidate equal to candidate's name
+            winning_candidate = candidate_name
 
-#5d Print the winner
-winning_candidate_summary = (f"-----------------------------\n"
-f"Winner: {winning_candidate}\n"
-f"Winning Vote count: {winning_count:,}\n"
-f"Winnning Percentage: {winning_percentage: .1f}%\n"
-f"-----------------------------\n")
-print(winning_candidate_summary)
+    #5d Print the winner
+    winning_candidate_summary = (f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote count: {winning_count:,}\n"
+    f"Winnning Percentage: {winning_percentage: .1f}%\n"
+    f"-------------------------\n")
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
 
 
 
-# #Using the open() function with the "w" mode we will write data to the file
-# # outfile = open(file_to_save, "w")
-# #Use the with statement open the file as a text file
-# with open(file_to_save, "w") as txt_file:
-# #Write some data to the file
-#     txt_file.write("Counties in the Election\n-------------------------\nArapahoe\nDenver\nJefferson")
+    # #Using the open() function with the "w" mode we will write data to the file
+    # # outfile = open(file_to_save, "w")
+    # #Use the with statement open the file as a text file
+    # with open(file_to_save, "w") as txt_file:
+    # #Write some data to the file
+    #     txt_file.write("Counties in the Election\n-------------------------\nArapahoe\nDenver\nJefferson")
 
-#Close the file
-# outfile.close()
+    #Close the file
+    # outfile.close()
 
 
 
