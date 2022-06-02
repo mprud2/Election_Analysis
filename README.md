@@ -1,7 +1,7 @@
 # Election_Analysis
 Module 3 work with Python
 
-## Project Overview
+## Election Audit Overview
 A Colorado Board of Electors employee has given you the following tasks to complete the election audit of a recent local congressional election.
 
 1. Calculate the total number of votes cast.
@@ -19,10 +19,18 @@ A Colorado Board of Electors employee has given you the following tasks to compl
 
 ## Summary
 
+https://github.com/mprud2/Election_Analysis/blob/ccfc115cebae605f9aaeebe76a5f6e5fac6fc997/Analysis/Screenshot_of_election_results.png
 
-
-The analysis of the election shows that:
+### Election Audit Results
 - There were 369,711 votes cast in the election
+
+#### County Breakdown
+- Jefferson County tallied 38,855 votes, which were 10.51% of ballots cast.
+- Denver County tallied 306,055 votes, which were  82.78% of ballots cast.
+- Arapahoe County tallied 24,801 voles, which were 6.71% of ballots cast.
+Denver was the biggest vote contributor to this election.
+
+#### Candidate Breakdown
 - The field of candidates were:
   -   Charles Casper Stockham
   -   Diana DeGette
@@ -34,6 +42,7 @@ The analysis of the election shows that:
 - The winner of the election was:
   -   Diana DeGette received 73.8% of the vote and 272,892 number of votes.
 
-## Challenge Overview
+### Election Audit Summary
+This audit was meant to demonstrate that meaningful statistics could be pulled from a csv file and then output to a text file of summary statistics.  As long as data is provided with similar headers, this code can be used to replicate similar outputs.  This script could be used on both smaller or larger elections, if the desired results are the same.  However, this code could also be updated to output other meaningful statistics, such as polling location, if the data is collected and included in the csv file.  Likewise, this code could also be modified to tabulate results in a place like Maine where ranked-choice voting creates a somewhat more involved tabulation process.  This could be achieved using additional for loops and if statements to eliminate candidates from the pool, if they did not receive enough votes, and then the voter's second or third choice could be tabulated instead.
 
 ## Challenge Summary
