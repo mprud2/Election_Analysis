@@ -19,8 +19,7 @@ A Colorado Board of Electors employee has given you the following tasks to compl
 
 ## Summary
 
-https://github.com/mprud2/Election_Analysis/blob/ccfc115cebae605f9aaeebe76a5f6e5fac6fc997/Analysis/Screenshot_of_election_results.png
-
+Analysis/Screenshot_of_election_results.png
 ### Election Audit Results
 - There were 369,711 votes cast in the election
 
