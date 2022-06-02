@@ -20,6 +20,7 @@ A Colorado Board of Electors employee has given me the following tasks to comple
 ## Summary
 
 <img width="239" alt="Screenshot_of_election_results" src="https://user-images.githubusercontent.com/104801614/171552259-98f4376a-69bf-4958-8170-474191578265.png">
+
 ### Election Audit Results
 - There were 369,711 votes cast in the election
 
