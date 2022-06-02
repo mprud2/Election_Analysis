@@ -43,5 +43,3 @@ Denver was the biggest vote contributor to this election.
 
 ### Election Audit Summary
 This audit was meant to demonstrate that meaningful statistics could be pulled from a csv file and then output to a text file of summary statistics.  As long as data is provided with similar headers, this code can be used to replicate similar outputs.  This script could be used on both smaller or larger elections, if the desired results are the same.  However, this code could also be updated to output other meaningful statistics, such as polling location, if the data is collected and included in the csv file.  Likewise, this code could also be modified to tabulate results in a place like Maine where ranked-choice voting creates a somewhat more involved tabulation process.  This could be achieved using additional for loops and if statements to eliminate candidates from the pool, if they did not receive enough votes, and then the voter's second or third choice could be tabulated instead.
-
-## Challenge Summary
